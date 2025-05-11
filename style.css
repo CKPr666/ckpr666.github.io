@@ -5,6 +5,7 @@ body {
   color: #333;
 }
 
+/* Modernized Header */
 header {
   background: #1e1e2f;
   color: #fff;
@@ -12,12 +13,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
   color: #fff;
   margin: 0 10px;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #f8b400;
 }
 
 .hero {
@@ -26,18 +33,21 @@ nav a {
   background: #e8f0fe;
 }
 
-.blog-preview, .notes {
-  padding: 2rem;
-}
-
+/* Improved Cards */
 .card {
   background: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin-top: 1rem;
+  transition: transform 0.3s ease-in-out;
 }
 
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Notes Section */
 .subjects {
   display: flex;
   flex-wrap: wrap;
@@ -46,18 +56,36 @@ nav a {
 }
 
 .subjects div {
-  background: #dfe6e9;
+  background: linear-gradient(135deg, #f8b400, #ff5f5f);
   padding: 1rem;
   border-radius: 8px;
   flex: 1 1 100px;
   text-align: center;
   font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   background: #1e1e2f;
   color: white;
   margin-top: 2rem;
+}
+
+/* Download Blog Button */
+#downloadBlog {
+  padding: 10px 15px;
+  background: #ff5f5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+#downloadBlog:hover {
+  background: #f33;
 }
