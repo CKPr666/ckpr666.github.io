@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NoBitA | Blog & Notes</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <header>
@@ -22,23 +22,31 @@
     <p>Your personal blog & class notes hub for easy learning & revision.</p>
   </section>
 
-  <section class="blog-preview">
-    <h3>📘 Latest Blog</h3>
-    <div class="card">
-      <h4>System Design - Building Scalable Software</h4>
-      <p>System design lays the foundation for scalable, efficient, and robust software. Learn about load balancing, caching, microservices, and more!</p>
-      <button id="downloadBlog">Download Blog</button>
+  <!-- Blog Categories -->
+  <section class="blog-categories">
+    <h3>📖 Browse Blogs by Category</h3>
+    <div class="category-tabs">
+      <button onclick="filterBlogs('all')">All</button>
+      <button onclick="filterBlogs('Tech')">Tech</button>
+      <button onclick="filterBlogs('Coding')">Coding</button>
+      <button onclick="filterBlogs('Lifestyle')">Lifestyle</button>
     </div>
   </section>
 
-  <section class="notes">
-    <h3>📚 Explore Notes</h3>
-    <div class="subjects">
-      <div>COA</div>
-      <div>DSA</div>
-      <div>Discrete Math</div>
-      <div>OS</div>
-    </div>
+  <!-- Dynamic Blog Container -->
+  <section class="blog-container" id="blogContainer"></section>
+
+  <!-- Blog Form to Add New Blog -->
+  <section class="add-blog">
+    <h3>➕ Add a New Blog</h3>
+    <input type="text" id="blogTitle" placeholder="Blog Title">
+    <textarea id="blogContent" placeholder="Write your blog content..."></textarea>
+    <select id="blogCategory">
+      <option value="Tech">Tech</option>
+      <option value="Coding">Coding</option>
+      <option value="Lifestyle">Lifestyle</option>
+    </select>
+    <button onclick="addBlog()">Post Blog</button>
   </section>
 
   <footer>
