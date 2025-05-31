@@ -1,58 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NoBitA | Blog & Notes</title>
-  <link rel="stylesheet" href="style.css?v=4">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NoBitA | Blog & Notes 2.0</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>NoBitA</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Blog</a>
-      <a href="#">Notes</a>
-      <a href="#">Contact</a>
-    </nav>
   </header>
 
-  <section class="hero">
-    <h2>Welcome to NoBitA</h2>
-    <p>Your personal blog & class notes hub for easy learning & revision.</p>
-  </section>
+  <nav class="main-tabs">
+    <button class="tab-btn active" data-tab="dsa">DSA</button>
+    <button class="tab-btn" data-tab="hld">HLD</button>
+    <button class="tab-btn" data-tab="lld">LLD</button>
+  </nav>
 
-  <!-- Blog Categories -->
-  <section class="blog-categories">
-    <h3>📖 Browse Blogs by Category</h3>
-    <div class="category-tabs">
-      <button onclick="filterBlogs('all')">All</button>
-      <button onclick="filterBlogs('Tech')">Tech</button>
-      <button onclick="filterBlogs('Coding')">Coding</button>
-      <button onclick="filterBlogs('Lifestyle')">Lifestyle</button>
-    </div>
-  </section>
+  <div class="content-wrapper">
+    <aside id="topicList" class="topic-list"></aside>
 
-  <!-- Dynamic Blog Container -->
-  <section class="blog-container" id="blogContainer"></section>
-
-  <!-- Blog Form to Add New Blog -->
-  <section class="add-blog">
-    <h3>➕ Add a New Blog</h3>
-    <input type="text" id="blogTitle" placeholder="Blog Title">
-    <textarea id="blogContent" placeholder="Write your blog content..."></textarea>
-    <select id="blogCategory">
-      <option value="Tech">Tech</option>
-      <option value="Coding">Coding</option>
-      <option value="Lifestyle">Lifestyle</option>
-    </select>
-    <button onclick="addBlog()">Post Blog</button>
-  </section>
+    <section class="blog-content" id="blogContentArea">
+      <h2>Welcome to NoBitA 2.0</h2>
+      <p>Select a topic from above to read notes or blogs.</p>
+      <!-- Download button will be added dynamically -->
+    </section>
+  </div>
 
   <footer>
     <p>© 2025 NoBitA | Made with ❤️ by CKPr666</p>
   </footer>
 
+  <!-- jsPDF library for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
